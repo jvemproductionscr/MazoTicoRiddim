@@ -6,19 +6,18 @@
   <title>Mazo Tico Riddim - Gran Estreno</title>
   <style>
     :root {
-      /* Colores con vibra reggae/roots pero muy limpios y modernos */
-      --bg-dark: #0a0c0a;
+      var(--bg-dark): #0a0c0a;
       --card-bg: rgba(255, 255, 255, 0.06);
       --card-hover: rgba(255, 255, 255, 0.12);
-      --accent-color: #e2b714; /* Tono dorado/cálido */
+      --accent-color: #e2b714; 
       --text-main: #ffffff;
       --text-muted: #a0aab5;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     
     body {
-      background: linear-gradient(135deg, #121813 0%, var(--bg-dark) 100%);
-      color: var(--text-main);
+      background: linear-gradient(135deg, #121813 0%, #0a0c0a 100%);
+      color: #ffffff;
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -34,9 +33,8 @@
       text-align: center;
     }
     
-    /* Etiqueta de Estreno */
     .release-badge {
-      background: var(--accent-color);
+      background: #e2b714;
       color: #000;
       font-weight: 800;
       font-size: 0.85rem;
@@ -55,17 +53,16 @@
       object-fit: cover;
       box-shadow: 0 15px 35px rgba(0,0,0,0.8);
       margin-bottom: 24px;
-      background-color: #222; /* Fondo por si no carga la imagen */
+      background-color: #222; 
     }
     
     h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
-    p.artist { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; }
+    p.artist { color: #a0aab5; font-size: 1.1rem; margin-bottom: 24px; }
     
-    /* Reproductor de YouTube */
     .video-container {
       width: 100%;
       position: relative;
-      padding-bottom: 56.25%; /* Ratio 16:9 */
+      padding-bottom: 56.25%; 
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 35px;
@@ -82,7 +79,7 @@
       font-size: 0.85rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: #a0aab5;
       margin-bottom: 18px;
     }
     
@@ -92,28 +89,28 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255,255,255,0.05);
       padding: 16px 20px;
       border-radius: 12px;
       text-decoration: none;
-      color: var(--text-main);
+      color: #ffffff;
       transition: all 0.3s ease;
     }
     .link-card:hover {
-      background: var(--card-hover);
+      background: rgba(255, 255, 255, 0.12);
       transform: translateY(-3px);
       border-color: rgba(255,255,255,0.15);
     }
     
     .platform-name { text-align: left; }
     .platform-name strong { display: block; font-size: 1rem; margin-bottom: 3px; }
-    .platform-name span { font-size: 0.8rem; color: var(--text-muted); }
+    .platform-name span { font-size: 0.8rem; color: #a0aab5; }
     
     .action-btn {
       background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--text-main);
+      color: #ffffff;
+      border: 1px solid #ffffff;
       font-size: 0.8rem;
       font-weight: 600;
       padding: 8px 18px;
@@ -122,11 +119,11 @@
       transition: all 0.3s;
     }
     .link-card:hover .action-btn {
-      background: var(--text-main);
+      background: #ffffff;
       color: #000;
     }
 
-    footer { margin-top: 45px; color: var(--text-muted); font-size: 0.8rem; }
+    footer { margin-top: 45px; color: #a0aab5; font-size: 0.8rem; }
   </style>
 </head>
 <body>
@@ -135,15 +132,12 @@
     
     <div class="release-badge">Disponible el 2 de Octubre</div>
 
-    <!-- Asegúrate de subir una imagen llamada cover.jpg al repositorio -->
     <img src="cover.jpg" alt="Portada Mazo Tico Riddim" class="cover" onerror="this.style.display='none'" />
     
     <h1>Mazo Tico Riddim</h1>
     <p class="artist">J-VEM Productions & GodToolz</p>
 
-    <!-- Trailer o Estreno de YouTube -->
     <div class="video-container">
-      <!-- Cambia TU_ID_DE_VIDEO por el ID del video. Si lo configuras como "Estreno" en YouTube, mostrará la cuenta regresiva aquí mismo -->
       <iframe 
         src="https://www.youtube-nocookie.com/embed/TU_ID_DE_VIDEO?rel=0" 
         title="Video Oficial" 
