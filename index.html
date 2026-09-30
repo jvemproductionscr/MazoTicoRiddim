@@ -16,8 +16,8 @@
     
     body {
       background-color: #0a0c0a;
-      /* Usa tu cover.jpeg oscurecido como fondo para un acabado muy profesional */
-      background-image: linear-gradient(rgba(10, 12, 10, 0.85), rgba(10, 12, 10, 0.98)), url('cover.jpeg');
+      /* Fondo llamando a cover.jpg con filtro oscuro */
+      background-image: linear-gradient(rgba(10, 12, 10, 0.85), rgba(10, 12, 10, 0.98)), url('cover.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -96,7 +96,7 @@
       justify-content: space-between;
       background: var(--card-bg);
       border: 1px solid rgba(255,255,255,0.05);
-      padding: 16px 20px;
+      padding: 14px 20px;
       border-radius: 12px;
       text-decoration: none;
       color: var(--text-main);
@@ -108,6 +108,19 @@
       border-color: rgba(255,255,255,0.15);
     }
     
+    /* Agrupamos el icono y los textos a la izquierda */
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .platform-icon {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
     .platform-name { text-align: left; }
     .platform-name strong { display: block; font-size: 1rem; margin-bottom: 3px; }
     .platform-name span { font-size: 0.8rem; color: var(--text-muted); }
@@ -137,14 +150,13 @@
     
     <div class="release-badge">Disponible el 2 de Octubre</div>
 
-    <!-- Usa exactamente cover.jpeg como está en tu repositorio -->
-    <img src="cover.jpeg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
+    <!-- Imagen principal cover.jpg -->
+    <img src="cover.jpg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
     
     <h1>Mazo Tico Riddim</h1>
     <p class="artist">J-VEM Productions & GodToolz</p>
 
     <div class="video-container">
-      <!-- Solo tienes que reemplazar TU_ID_DE_VIDEO por los últimos dígitos de tu enlace en YouTube -->
       <iframe 
         src="https://www.youtube-nocookie.com/embed/TU_ID_DE_VIDEO?rel=0" 
         title="Video Oficial" 
@@ -157,44 +169,57 @@
 
     <div class="links-wrapper">
       
-      <!-- Ya configurado con tu YouTube -->
       <a href="https://www.youtube.com/@J-VEMProductions" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>YouTube</strong>
-          <span>Ir al canal de la productora</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/youtube/white" class="platform-icon" alt="YouTube" />
+          <div class="platform-name">
+            <strong>YouTube</strong>
+            <span>Ir al canal de la productora</span>
+          </div>
         </div>
         <span class="action-btn">Canal</span>
       </a>
 
-      <!-- Sustituye los enlaces abajo por los de cada tienda -->
       <a href="ENLACE_DIRECTO_SPOTIFY" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Spotify</strong>
-          <span>Pre-guardar / Escuchar</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/spotify/white" class="platform-icon" alt="Spotify" />
+          <div class="platform-name">
+            <strong>Spotify</strong>
+            <span>Pre-guardar / Escuchar</span>
+          </div>
         </div>
         <span class="action-btn">Spotify</span>
       </a>
 
       <a href="ENLACE_DIRECTO_APPLE" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Apple Music</strong>
-          <span>Pre-agregar / Escuchar</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/applemusic/white" class="platform-icon" alt="Apple Music" />
+          <div class="platform-name">
+            <strong>Apple Music</strong>
+            <span>Pre-agregar / Escuchar</span>
+          </div>
         </div>
         <span class="action-btn">Apple</span>
       </a>
       
       <a href="ENLACE_DIRECTO_DEEZER" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Deezer</strong>
-          <span>Escuchar en streaming</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/deezer/white" class="platform-icon" alt="Deezer" />
+          <div class="platform-name">
+            <strong>Deezer</strong>
+            <span>Escuchar en streaming</span>
+          </div>
         </div>
         <span class="action-btn">Deezer</span>
       </a>
 
       <a href="ENLACE_DIRECTO_AMAZON" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Amazon Music</strong>
-          <span>Escuchar el proyecto</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/amazonmusic/white" class="platform-icon" alt="Amazon Music" />
+          <div class="platform-name">
+            <strong>Amazon Music</strong>
+            <span>Escuchar el proyecto</span>
+          </div>
         </div>
         <span class="action-btn">Amazon</span>
       </a>
@@ -203,20 +228,24 @@
     <div class="section-title">Síguenos en Redes</div>
     
     <div class="links-wrapper">
-      <!-- Ya configurado con Instagram J-VEM -->
       <a href="https://www.instagram.com/jvemprod.cr" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Instagram</strong>
-          <span>@jvemprod.cr</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/instagram/white" class="platform-icon" alt="Instagram" />
+          <div class="platform-name">
+            <strong>Instagram</strong>
+            <span>@jvemprod.cr</span>
+          </div>
         </div>
         <span class="action-btn">Seguir</span>
       </a>
 
-      <!-- Ya configurado con Instagram GodToolz -->
       <a href="https://www.instagram.com/GodToolz" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Instagram</strong>
-          <span>@GodToolz</span>
+        <div class="link-left">
+          <img src="https://cdn.simpleicons.org/instagram/white" class="platform-icon" alt="Instagram" />
+          <div class="platform-name">
+            <strong>Instagram</strong>
+            <span>@GodToolz</span>
+          </div>
         </div>
         <span class="action-btn">Seguir</span>
       </a>
