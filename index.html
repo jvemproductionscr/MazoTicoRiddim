@@ -16,7 +16,6 @@
     
     body {
       background-color: #0a0c0a;
-      /* Fondo llamando a cover.jpg con filtro oscuro */
       background-image: linear-gradient(rgba(10, 12, 10, 0.85), rgba(10, 12, 10, 0.98)), url('cover.jpg');
       background-size: cover;
       background-position: center;
@@ -108,7 +107,6 @@
       border-color: rgba(255,255,255,0.15);
     }
     
-    /* Agrupamos el icono y los textos a la izquierda */
     .link-left {
       display: flex;
       align-items: center;
@@ -148,9 +146,8 @@
 
   <div class="container">
     
-    <div class="release-badge">Disponible el 2 de Octubre, 2026</div>
+    <div class="release-badge">Disponible el 2 de Octubre</div>
 
-    <!-- Imagen principal cover.jpg -->
     <img src="cover.jpg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
     
     <h1>Mazo Tico Riddim</h1>
@@ -215,7 +212,10 @@
 
       <a href="ENLACE_DIRECTO_AMAZON" target="_blank" rel="noopener" class="link-card">
         <div class="link-left">
-          <img src="https://cdn.simpleicons.org/amazon/white" class="platform-icon" alt="Amazon Music" />
+          <!-- Icono de Amazon incrustado sin enlaces externos -->
+          <svg class="platform-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.981 18.006c-1.895.845-4.103 1.258-6.196 1.258-2.617 0-4.883-.541-6.732-1.637a.389.389 0 0 0-.54.127l-.645 1.055a.39.39 0 0 0 .148.528c2.259 1.341 5.083 1.944 7.82 1.944 2.507 0 4.883-.497 7.078-1.464a.388.388 0 0 0 .193-.499l-.497-1.121a.386.386 0 0 0-.629-.191z"/>
+          </svg>
           <div class="platform-name">
             <strong>Amazon Music</strong>
             <span>Escuchar el proyecto</span>
