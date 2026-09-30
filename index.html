@@ -10,13 +10,14 @@
       --card-hover: rgba(255, 255, 255, 0.15);
       --text-main: #ffffff;
       --text-muted: #a0aab5;
+      --accent: #e2b714;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     
     body {
       background-color: #0a0c0a;
-      /* Aquí llamamos al fondo.jpg y le ponemos una capa semitransparente oscura para que las letras resalten */
-      background-image: linear-gradient(rgba(10, 12, 10, 0.8), rgba(10, 12, 10, 0.95)), url('fondo.jpg');
+      /* Usa tu cover.jpeg oscurecido como fondo para un acabado muy profesional */
+      background-image: linear-gradient(rgba(10, 12, 10, 0.85), rgba(10, 12, 10, 0.98)), url('cover.jpeg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -37,7 +38,7 @@
     }
     
     .release-badge {
-      background: #e2b714;
+      background: var(--accent);
       color: #000;
       font-weight: 800;
       font-size: 0.85rem;
@@ -60,7 +61,7 @@
     }
     
     h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
-    p.artist { color: #a0aab5; font-size: 1.1rem; margin-bottom: 24px; }
+    p.artist { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; }
     
     .video-container {
       width: 100%;
@@ -82,9 +83,9 @@
       font-size: 0.85rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #a0aab5;
+      color: var(--text-muted);
       margin-bottom: 18px;
-      margin-top: 10px;
+      margin-top: 15px;
     }
     
     .links-wrapper { width: 100%; display: flex; flex-direction: column; gap: 14px; }
@@ -98,7 +99,7 @@
       padding: 16px 20px;
       border-radius: 12px;
       text-decoration: none;
-      color: #ffffff;
+      color: var(--text-main);
       transition: all 0.3s ease;
     }
     .link-card:hover {
@@ -109,12 +110,12 @@
     
     .platform-name { text-align: left; }
     .platform-name strong { display: block; font-size: 1rem; margin-bottom: 3px; }
-    .platform-name span { font-size: 0.8rem; color: #a0aab5; }
+    .platform-name span { font-size: 0.8rem; color: var(--text-muted); }
     
     .action-btn {
       background: transparent;
-      color: #ffffff;
-      border: 1px solid #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--text-main);
       font-size: 0.8rem;
       font-weight: 600;
       padding: 8px 18px;
@@ -123,11 +124,11 @@
       transition: all 0.3s;
     }
     .link-card:hover .action-btn {
-      background: #ffffff;
+      background: var(--text-main);
       color: #000;
     }
 
-    footer { margin-top: 45px; color: #a0aab5; font-size: 0.8rem; }
+    footer { margin-top: 45px; color: var(--text-muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
@@ -136,13 +137,14 @@
     
     <div class="release-badge">Disponible el 2 de Octubre</div>
 
-    <!-- Esta etiqueta llama a tu cover.jpg -->
-    <img src="cover.jpg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
+    <!-- Usa exactamente cover.jpeg como está en tu repositorio -->
+    <img src="cover.jpeg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
     
     <h1>Mazo Tico Riddim</h1>
     <p class="artist">J-VEM Productions & GodToolz</p>
 
     <div class="video-container">
+      <!-- Solo tienes que reemplazar TU_ID_DE_VIDEO por los últimos dígitos de tu enlace en YouTube -->
       <iframe 
         src="https://www.youtube-nocookie.com/embed/TU_ID_DE_VIDEO?rel=0" 
         title="Video Oficial" 
@@ -155,15 +157,17 @@
 
     <div class="links-wrapper">
       
-      <a href="ENLACE_YOUTUBE" target="_blank" rel="noopener" class="link-card">
+      <!-- Ya configurado con tu YouTube -->
+      <a href="https://www.youtube.com/@J-VEMProductions" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>YouTube</strong>
-          <span>Activar recordatorio</span>
+          <span>Ir al canal de la productora</span>
         </div>
         <span class="action-btn">Canal</span>
       </a>
 
-      <a href="ENLACE_SPOTIFY" target="_blank" rel="noopener" class="link-card">
+      <!-- Sustituye los enlaces abajo por los de cada tienda -->
+      <a href="ENLACE_DIRECTO_SPOTIFY" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Spotify</strong>
           <span>Pre-guardar / Escuchar</span>
@@ -171,16 +175,15 @@
         <span class="action-btn">Spotify</span>
       </a>
 
-      <a href="ENLACE_APPLE" target="_blank" rel="noopener" class="link-card">
+      <a href="ENLACE_DIRECTO_APPLE" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Apple Music</strong>
-          <span>Pre-agregar</span>
+          <span>Pre-agregar / Escuchar</span>
         </div>
         <span class="action-btn">Apple</span>
       </a>
       
-      <!-- Nuevas plataformas agregadas -->
-      <a href="ENLACE_DEEZER" target="_blank" rel="noopener" class="link-card">
+      <a href="ENLACE_DIRECTO_DEEZER" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Deezer</strong>
           <span>Escuchar en streaming</span>
@@ -188,21 +191,20 @@
         <span class="action-btn">Deezer</span>
       </a>
 
-      <a href="ENLACE_AMAZON" target="_blank" rel="noopener" class="link-card">
+      <a href="ENLACE_DIRECTO_AMAZON" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Amazon Music</strong>
-          <span>Escuchar</span>
+          <span>Escuchar el proyecto</span>
         </div>
         <span class="action-btn">Amazon</span>
       </a>
-
     </div>
 
-    <!-- Sección de Redes Sociales -->
-    <div class="section-title" style="margin-top: 35px;">Síguenos en Redes</div>
+    <div class="section-title">Síguenos en Redes</div>
     
     <div class="links-wrapper">
-      <a href="ENLACE_INSTAGRAM_JVEM" target="_blank" rel="noopener" class="link-card">
+      <!-- Ya configurado con Instagram J-VEM -->
+      <a href="https://www.instagram.com/jvemprod.cr" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Instagram</strong>
           <span>@jvemprod.cr</span>
@@ -210,20 +212,13 @@
         <span class="action-btn">Seguir</span>
       </a>
 
-      <a href="ENLACE_INSTAGRAM_GODTOOLZ" target="_blank" rel="noopener" class="link-card">
+      <!-- Ya configurado con Instagram GodToolz -->
+      <a href="https://www.instagram.com/GodToolz" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>Instagram</strong>
           <span>@GodToolz</span>
         </div>
         <span class="action-btn">Seguir</span>
-      </a>
-
-      <a href="ENLACE_FACEBOOK" target="_blank" rel="noopener" class="link-card">
-        <div class="platform-name">
-          <strong>Facebook</strong>
-          <span>Únete a la comunidad</span>
-        </div>
-        <span class="action-btn">Ir a Face</span>
       </a>
     </div>
 
