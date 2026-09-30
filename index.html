@@ -6,17 +6,20 @@
   <title>Mazo Tico Riddim - Gran Estreno</title>
   <style>
     :root {
-      var(--bg-dark): #0a0c0a;
-      --card-bg: rgba(255, 255, 255, 0.06);
-      --card-hover: rgba(255, 255, 255, 0.12);
-      --accent-color: #e2b714; 
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(255, 255, 255, 0.15);
       --text-main: #ffffff;
       --text-muted: #a0aab5;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     
     body {
-      background: linear-gradient(135deg, #121813 0%, #0a0c0a 100%);
+      background-color: #0a0c0a;
+      /* Aquí llamamos al fondo.jpg y le ponemos una capa semitransparente oscura para que las letras resalten */
+      background-image: linear-gradient(rgba(10, 12, 10, 0.8), rgba(10, 12, 10, 0.95)), url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #ffffff;
       min-height: 100vh;
       display: flex;
@@ -81,6 +84,7 @@
       text-transform: uppercase;
       color: #a0aab5;
       margin-bottom: 18px;
+      margin-top: 10px;
     }
     
     .links-wrapper { width: 100%; display: flex; flex-direction: column; gap: 14px; }
@@ -89,7 +93,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(255, 255, 255, 0.06);
+      background: var(--card-bg);
       border: 1px solid rgba(255,255,255,0.05);
       padding: 16px 20px;
       border-radius: 12px;
@@ -98,7 +102,7 @@
       transition: all 0.3s ease;
     }
     .link-card:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: var(--card-hover);
       transform: translateY(-3px);
       border-color: rgba(255,255,255,0.15);
     }
@@ -132,7 +136,8 @@
     
     <div class="release-badge">Disponible el 2 de Octubre</div>
 
-    <img src="cover.jpg" alt="Portada Mazo Tico Riddim" class="cover" onerror="this.style.display='none'" />
+    <!-- Esta etiqueta llama a tu cover.jpg -->
+    <img src="cover.jpg" alt="Portada Oficial" class="cover" onerror="this.style.display='none'" />
     
     <h1>Mazo Tico Riddim</h1>
     <p class="artist">J-VEM Productions & GodToolz</p>
@@ -153,9 +158,9 @@
       <a href="ENLACE_YOUTUBE" target="_blank" rel="noopener" class="link-card">
         <div class="platform-name">
           <strong>YouTube</strong>
-          <span>Activar recordatorio de estreno</span>
+          <span>Activar recordatorio</span>
         </div>
-        <span class="action-btn">Ir al canal</span>
+        <span class="action-btn">Canal</span>
       </a>
 
       <a href="ENLACE_SPOTIFY" target="_blank" rel="noopener" class="link-card">
@@ -173,7 +178,53 @@
         </div>
         <span class="action-btn">Apple</span>
       </a>
+      
+      <!-- Nuevas plataformas agregadas -->
+      <a href="ENLACE_DEEZER" target="_blank" rel="noopener" class="link-card">
+        <div class="platform-name">
+          <strong>Deezer</strong>
+          <span>Escuchar en streaming</span>
+        </div>
+        <span class="action-btn">Deezer</span>
+      </a>
 
+      <a href="ENLACE_AMAZON" target="_blank" rel="noopener" class="link-card">
+        <div class="platform-name">
+          <strong>Amazon Music</strong>
+          <span>Escuchar</span>
+        </div>
+        <span class="action-btn">Amazon</span>
+      </a>
+
+    </div>
+
+    <!-- Sección de Redes Sociales -->
+    <div class="section-title" style="margin-top: 35px;">Síguenos en Redes</div>
+    
+    <div class="links-wrapper">
+      <a href="ENLACE_INSTAGRAM_JVEM" target="_blank" rel="noopener" class="link-card">
+        <div class="platform-name">
+          <strong>Instagram</strong>
+          <span>@jvemprod.cr</span>
+        </div>
+        <span class="action-btn">Seguir</span>
+      </a>
+
+      <a href="ENLACE_INSTAGRAM_GODTOOLZ" target="_blank" rel="noopener" class="link-card">
+        <div class="platform-name">
+          <strong>Instagram</strong>
+          <span>@GodToolz</span>
+        </div>
+        <span class="action-btn">Seguir</span>
+      </a>
+
+      <a href="ENLACE_FACEBOOK" target="_blank" rel="noopener" class="link-card">
+        <div class="platform-name">
+          <strong>Facebook</strong>
+          <span>Únete a la comunidad</span>
+        </div>
+        <span class="action-btn">Ir a Face</span>
+      </a>
     </div>
 
     <footer>© 2026 J-VEM Productions</footer>
